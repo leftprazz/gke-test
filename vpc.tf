@@ -68,13 +68,13 @@ resource "google_compute_firewall" "gke-test-allow-https" {
     source_ranges = ["0.0.0.0/0"]
 }
 
-resource "google_compute_firewall" "gke-test-allow-frontend" {
-    name    = "gke-test-allow-frontend"
+resource "google_compute_firewall" "gke-test-allow-app" {
+    name    = "gke-test-allow-app"
     network = google_compute_network.gke-test.name
 
     allow {
         protocol = "tcp"
-        ports = ["5000"] 
+        ports = ["8081-8082"] 
     }
     source_ranges = ["0.0.0.0/0"]
 }
