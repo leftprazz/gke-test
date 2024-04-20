@@ -32,9 +32,9 @@ variable "network" {
   default = {
     name                = "gke-test-network"
     subnetwork_name     = "private"
-    nodes_cidr_range    = "10.17.0.0/27"
-    pods_cidr_range     = "10.27.0.0/24"
-    services_cidr_range = "10.7.0.0/27"
+    nodes_cidr_range    = "10.18.0.0/27"
+    pods_cidr_range     = "10.28.0.0/24"
+    services_cidr_range = "10.8.0.0/27"
   }
 }
 
